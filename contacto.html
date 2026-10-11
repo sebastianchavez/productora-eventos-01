@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Eventos Lumière</title>
+  <meta name="description" content="Contacta con Eventos Lumière. Formulario, teléfono, email, ubicación y horarios de atención.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
+          colors: { gold: { DEFAULT: '#d4af37', light: '#e8c962', dark: '#a8861e' } }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-16 px-6 bg-[#141414] text-center">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-yellow-400 uppercase tracking-[0.3em] text-sm mb-4 animate-fade-in-up">Hablemos</p>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up delay-100">
+        Estamos a tu <span class="text-gradient-gold">disposición</span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up delay-200">
+        Cuéntanos tu proyecto y descubre cómo podemos hacerlo realidad. La primera consulta es gratuita.
+      </p>
+    </div>
+  </section>
+
+  <!-- FORMULARIO + INFO -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-5 gap-12">
+        <!-- FORMULARIO -->
+        <div class="lg:col-span-3 reveal-left">
+          <div class="card p-8">
+            <h2 class="font-serif text-3xl font-bold mb-2 text-white">Solicita tu presupuesto</h2>
+            <p class="text-gray-400 mb-8">Completa el formulario y te contactaremos en menos de 24 horas.</p>
+
+            <form id="contact-form" novalidate>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label" for="nombre">Nombre completo *</label>
+                  <input type="text" id="nombre" name="nombre" class="form-input" required>
+                  <p class="form-error"></p>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email *</label>
+                  <input type="email" id="email" name="email" class="form-input" required>
+                  <p class="form-error"></p>
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label" for="telefono">Teléfono *</label>
+                  <input type="tel" id="telefono" name="telefono" class="form-input" required>
+                  <p class="form-error"></p>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fecha">Fecha aproximada del evento</label>
+                  <input type="date" id="fecha" name="fecha" class="form-input">
+                  <p class="form-error"></p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="tipo">Tipo de evento *</label>
+                <select id="tipo" name="tipo" class="form-select" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="boda">Boda</option>
+                  <option value="corporativo">Evento corporativo</option>
+                  <option value="concierto">Concierto / Festival</option>
+                  <option value="conferencia">Conferencia / Congreso</option>
+                  <option value="lanzamiento">Lanzamiento / Inauguración</option>
+                  <option value="privado">Fiesta privada</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <p class="form-error"></p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="presupuesto">Presupuesto estimado (CLP)</label>
+                <select id="presupuesto" name="presupuesto" class="form-select">
+                  <option value="">Selecciona un rango</option>
+                  <option value="2m-5m">$2.500.000 - $5.000.000</option>
+                  <option value="5m-10m">$5.000.000 - $10.000.000</option>
+                  <option value="10m-20m">$10.000.000 - $20.000.000</option>
+                  <option value="20m+">Más de $20.000.000</option>
+                  <option value="consultar">Prefiero consultar</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="mensaje">Cuéntanos sobre tu evento *</label>
+                <textarea id="mensaje" name="mensaje" class="form-textarea" placeholder="Número de invitados, ubicación, ideas, necesidades especiales..." required></textarea>
+                <p class="form-error"></p>
+              </div>
+
+              <div class="form-group">
+                <label class="flex items-start gap-3 text-sm text-gray-400 cursor-pointer">
+                  <input type="checkbox" required class="mt-1 accent-yellow-500">
+                  <span>Acepto la <a href="privacidad.html" class="text-yellow-400 hover:underline">política de privacidad</a> y el tratamiento de mis datos.</span>
+                </label>
+              </div>
+
+              <div id="form-success" class="form-success mb-4">
+                <span class="text-2xl">✓</span>
+                <div>
+                  <strong>¡Mensaje enviado correctamente!</strong>
+                  <p class="text-sm">Te contactaremos en menos de 24 horas.</p>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-primary w-full">Enviar Mensaje</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- INFO -->
+        <div class="lg:col-span-2 space-y-6 reveal-right">
+          <div class="card p-6">
+            <h3 class="font-serif text-2xl font-bold mb-6 text-yellow-400">Información de contacto</h3>
+            <ul class="space-y-5 text-sm">
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 flex-shrink-0">📍</div>
+                <div>
+                  <h4 class="font-semibold text-white mb-1">Dirección</h4>
+                  <p class="text-gray-400" id="contact-address">Cargando...</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 flex-shrink-0">📞</div>
+                <div>
+                  <h4 class="font-semibold text-white mb-1">Teléfono</h4>
+                  <a href="#" id="contact-phone" class="text-gray-400 hover:text-yellow-400 transition">Cargando...</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 flex-shrink-0">💬</div>
+                <div>
+                  <h4 class="font-semibold text-white mb-1">WhatsApp</h4>
+                  <a href="#" id="contact-whatsapp" class="text-gray-400 hover:text-yellow-400 transition">Cargando...</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 flex-shrink-0">✉</div>
+                <div>
+                  <h4 class="font-semibold text-white mb-1">Email</h4>
+                  <a href="#" id="contact-email" class="text-gray-400 hover:text-yellow-400 transition">Cargando...</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-serif text-2xl font-bold mb-6 text-yellow-400">Horarios de atención</h3>
+            <ul class="space-y-3 text-sm text-gray-300" id="contact-hours">
+              <li class="flex items-center gap-3">
+                <span class="text-yellow-400">🕐</span>
+                <span>Cargando...</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-serif text-2xl font-bold mb-4 text-yellow-400">Síguenos</h3>
+            <div class="flex gap-3" id="contact-social">
+              <!-- Inyectado por JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section class="py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10 reveal">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold section-title">Encuéntranos</h2>
+        <p class="text-gray-400 mt-6">Visítanos en nuestra oficina de Santiago. Te invitamos a un café ☕.</p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-[#2a2a2a] reveal-scale h-96">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.123456789!2d-70.5728!3d-33.4123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5f0e8e0e0e0%3A0x0!2sAv.%20Apoquindo%204501%2C%20Las%20Condes%2C%20Chile!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl" 
+          width="100%" 
+          height="100%" 
+          style="border:0; filter: invert(0.92) hue-rotate(180deg);" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contacto.js"></script>
+  <script>
+    injectComponents('contacto.html');
+
+    // Llenar info de contacto
+    const b = LUMIERE_DATA.brand;
+    document.getElementById('contact-address').innerHTML = `${b.address}<br>${b.city}`;
+    document.getElementById('contact-phone').href = `tel:${b.phone.replace(/\s/g, '')}`;
+    document.getElementById('contact-phone').textContent = b.phone;
+    document.getElementById('contact-whatsapp').href = `https://wa.me/${b.whatsapp.replace(/[^0-9]/g, '')}`;
+    document.getElementById('contact-whatsapp').textContent = b.whatsapp;
+    document.getElementById('contact-email').href = `mailto:${b.email}`;
+    document.getElementById('contact-email').textContent = b.email;
+
+    document.getElementById('contact-hours').innerHTML = `
+      <li class="flex items-center gap-3"><span class="text-yellow-400">🕐</span><span>${b.hours.weekdays}</span></li>
+      <li class="flex items-center gap-3"><span class="text-yellow-400">🕐</span><span>${b.hours.saturday}</span></li>
+      <li class="flex items-center gap-3"><span class="text-yellow-400">🕐</span><span>${b.hours.sunday}</span></li>
+    `;
+
+    const socials = [
+      { url: b.social.instagram, label: 'Instagram', icon: '📷' },
+      { url: b.social.facebook, label: 'Facebook', icon: 'f' },
+      { url: b.social.youtube, label: 'YouTube', icon: '▶' },
+      { url: b.social.tiktok, label: 'TikTok', icon: '♪' },
+      { url: b.social.pinterest, label: 'Pinterest', icon: 'P' }
+    ];
+    document.getElementById('contact-social').innerHTML = socials.map(s => `
+      <a href="${s.url}" target="_blank" rel="noopener" 
+         class="w-11 h-11 rounded-full bg-[#1a1a1a] hover:bg-yellow-500 hover:text-black flex items-center justify-center transition text-gray-400 font-bold" 
+         aria-label="${s.label}">${s.icon}</a>
+    `).join('');
+
+    initScrollReveal();
+  </script>
+</body>
+</html>

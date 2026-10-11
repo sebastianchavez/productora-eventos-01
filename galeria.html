@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería | Eventos Lumière</title>
+  <meta name="description" content="Galería de eventos producidos por Lumière: bodas, corporativos, conciertos y más.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
+          colors: { gold: { DEFAULT: '#d4af37', light: '#e8c962', dark: '#a8861e' } }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-16 px-6 bg-[#141414] text-center">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-yellow-400 uppercase tracking-[0.3em] text-sm mb-4 animate-fade-in-up">Portfolio</p>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up delay-100">
+        Nuestra <span class="text-gradient-gold">Galería</span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up delay-200">
+        Una selección de los momentos que hemos creado. Cada imagen cuenta una historia única.
+      </p>
+    </div>
+  </section>
+
+  <!-- FILTROS -->
+  <section class="py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-wrap gap-3 justify-center mb-12" id="gallery-filters">
+        <!-- Inyectado por JS -->
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Inyectado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6 bg-[#141414] mt-16">
+    <div class="max-w-4xl mx-auto text-center reveal">
+      <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">¿Te imaginas aquí tu evento?</h2>
+      <p class="text-lg text-gray-300 mb-8">Hagamos que tu próxima producción sea la siguiente en nuestra galería.</p>
+      <a href="contacto.html" class="btn-primary">Empezar Proyecto</a>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/galeria.js"></script>
+  <script>
+    injectComponents('galeria.html');
+  </script>
+</body>
+</html>

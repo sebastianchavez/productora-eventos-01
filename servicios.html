@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios | Eventos Lumière</title>
+  <meta name="description" content="Servicios de producción de eventos: bodas, corporativos, conciertos, conferencias, lanzamientos y fiestas privadas.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
+          colors: { gold: { DEFAULT: '#d4af37', light: '#e8c962', dark: '#a8861e' } }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-16 px-6 bg-[#141414] text-center">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-yellow-400 uppercase tracking-[0.3em] text-sm mb-4 animate-fade-in-up">Lo que ofrecemos</p>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up delay-100">
+        Servicios <span class="text-gradient-gold">Premium</span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up delay-200">
+        Desde bodas íntimas hasta festivales de gran formato. Cada servicio se diseña a medida para superar tus expectativas.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto space-y-24" id="services-container">
+      <!-- Inyectado por JS -->
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="py-24 px-6 bg-[#141414]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="text-yellow-400 uppercase tracking-widest text-sm mb-3">Cómo trabajamos</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold section-title">Nuestro proceso</h2>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center reveal">
+          <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center text-black font-serif text-3xl font-bold mb-4">1</div>
+          <h3 class="font-serif text-xl font-bold mb-2 text-white">Consulta</h3>
+          <p class="text-gray-400 text-sm">Escuchamos tu visión y analizamos tus necesidades en una reunión sin compromiso.</p>
+        </div>
+
+        <div class="text-center reveal" style="animation-delay: 100ms">
+          <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center text-black font-serif text-3xl font-bold mb-4">2</div>
+          <h3 class="font-serif text-xl font-bold mb-2 text-white">Propuesta</h3>
+          <p class="text-gray-400 text-sm">Diseñamos una propuesta personalizada con presupuesto detallado y plan de acción.</p>
+        </div>
+
+        <div class="text-center reveal" style="animation-delay: 200ms">
+          <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center text-black font-serif text-3xl font-bold mb-4">3</div>
+          <h3 class="font-serif text-xl font-bold mb-2 text-white">Producción</h3>
+          <p class="text-gray-400 text-sm">Coordinamos cada detalle, proveedores, logística y cronograma del evento.</p>
+        </div>
+
+        <div class="text-center reveal" style="animation-delay: 300ms">
+          <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center text-black font-serif text-3xl font-bold mb-4">4</div>
+          <h3 class="font-serif text-xl font-bold mb-2 text-white">Celebración</h3>
+          <p class="text-gray-400 text-sm">Ejecutamos el evento con coordinación en vivo y atención a cada detalle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center reveal">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">¿Tienes un proyecto en mente?</h2>
+      <p class="text-xl text-gray-300 mb-10">Cuéntanos tu idea y la haremos realidad juntos.</p>
+      <a href="contacto.html" class="btn-primary">Solicitar Presupuesto</a>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    injectComponents('servicios.html');
+
+    const servicesContainer = document.getElementById('services-container');
+    servicesContainer.innerHTML = LUMIERE_DATA.services.map((s, i) => {
+      const isEven = i % 2 === 0;
+      return `
+        <article id="${s.id}" class="grid lg:grid-cols-2 gap-12 items-center reveal-scale">
+          <div class="${isEven ? 'lg:order-1' : 'lg:order-2'}">
+            <img src="${s.image}" alt="${s.title}" class="rounded-2xl shadow-2xl w-full aspect-[4/3] object-cover" loading="lazy">
+          </div>
+          <div class="${isEven ? 'lg:order-2' : 'lg:order-1'}">
+            <div class="text-5xl mb-4">${s.icon}</div>
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">${s.title}</h2>
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">${s.shortDesc}</p>
+            <ul class="space-y-3 mb-8">
+              ${s.features.map(f => `
+                <li class="flex items-start gap-3 text-gray-300">
+                  <span class="text-yellow-400 mt-1 flex-shrink-0">✓</span>
+                  <span>${f}</span>
+                </li>
+              `).join('')}
+            </ul>
+            <a href="contacto.html" class="btn-primary">Solicitar Información</a>
+          </div>
+        </article>
+        ${i < LUMIERE_DATA.services.length - 1 ? '<div class="divider"><span class="divider-icon">✦</span></div>' : ''}
+      `;
+    }).join('');
+
+    initScrollReveal();
+  </script>
+</body>
+</html>

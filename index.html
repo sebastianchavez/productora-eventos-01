@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos Lumière | Productora de Eventos Premium en Chile</title>
+  <meta name="description" content="Productora de eventos premium especializada en bodas, eventos corporativos, conciertos y producciones únicas en Chile.">
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            gold: {
+              DEFAULT: '#d4af37',
+              light: '#e8c962',
+              dark: '#a8861e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+  <!-- Navbar (inyectado por JS) -->
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content max-w-5xl mx-auto px-6">
+      <p class="text-yellow-400 uppercase tracking-[0.3em] text-sm mb-6 animate-fade-in-up">Productora de Eventos Premium</p>
+      <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight animate-fade-in-up delay-100">
+        Creamos momentos que <span class="text-gradient-gold">brillan</span> para siempre
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto animate-fade-in-up delay-200">
+        Diseñamos bodas, eventos corporativos y producciones únicas con la elegancia y el detalle que tu momento merece.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
+        <a href="contacto.html" class="btn-primary">Reservar Consulta Gratuita</a>
+        <a href="galeria.html" class="btn-outline">Ver Galería</a>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS DESTACADOS -->
+  <section class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="text-yellow-400 uppercase tracking-widest text-sm mb-3">Lo que hacemos</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 section-title">Nuestros Servicios</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-6">Cada evento es único. Por eso diseñamos experiencias a medida que reflejan tu visión, superamos expectativas y crean recuerdos imborrables.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+        <!-- Inyectado por JS -->
+      </div>
+
+      <div class="text-center mt-12 reveal">
+        <a href="servicios.html" class="btn-outline">Ver todos los servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="py-20 px-6 bg-[#141414]">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6" id="stats-grid">
+        <!-- Inyectado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMOS EVENTOS -->
+  <section class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="text-yellow-400 uppercase tracking-widest text-sm mb-3">Agenda</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 section-title">Próximos Eventos</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-6">Una muestra de los eventos que tenemos en cartera. ¿El próximo será el tuyo?</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6" id="events-grid">
+        <!-- Inyectado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="py-24 px-6 bg-[#141414]">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="text-yellow-400 uppercase tracking-widest text-sm mb-3">Testimonios</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 section-title">Lo que dicen nuestros clientes</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="testimonials-grid">
+        <!-- Inyectado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-yellow-900/20 via-black to-yellow-900/20"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
+      <h2 class="font-serif text-4xl md:text-6xl font-bold mb-6">¿Listo para crear algo <span class="text-gradient-gold">extraordinario</span>?</h2>
+      <p class="text-xl text-gray-300 mb-10">Reserva una consulta gratuita y descubre cómo hacer realidad el evento de tus sueños.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contacto.html" class="btn-primary">Reservar Consulta</a>
+        <a href="tel:+56228984500" class="btn-outline">📞 Llamar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (inyectado por JS) -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Inyectar componentes
+    injectComponents('index.html');
+
+    // Render servicios destacados
+    const servicesGrid = document.getElementById('services-grid');
+    servicesGrid.innerHTML = LUMIERE_DATA.services.slice(0, 6).map((s, i) => `
+      <div class="card reveal" style="animation-delay: ${i * 100}ms">
+        <div class="card-image">
+          <img src="${s.image}" alt="${s.title}" loading="lazy">
+          <div class="absolute top-4 left-4 text-4xl z-10">${s.icon}</div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-serif text-2xl font-bold mb-2 text-white">${s.title}</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">${s.shortDesc}</p>
+          <a href="servicios.html#${s.id}" class="text-yellow-400 text-sm font-semibold hover:gap-3 inline-flex items-center gap-2 transition-all">
+            Ver más
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    `).join('');
+
+    // Render stats
+    const statsGrid = document.getElementById('stats-grid');
+    statsGrid.innerHTML = LUMIERE_DATA.stats.map((s, i) => `
+      <div class="stat-card reveal" style="animation-delay: ${i * 100}ms">
+        <div class="stat-number" data-counter="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</div>
+        <p class="text-gray-400 text-sm uppercase tracking-wider mt-3">${s.label}</p>
+      </div>
+    `).join('');
+
+    // Re-init counters y reveal tras inyección
+    initCounters();
+    initScrollReveal();
+
+    // Render eventos
+    const eventsGrid = document.getElementById('events-grid');
+    eventsGrid.innerHTML = LUMIERE_DATA.upcomingEvents.map((e, i) => `
+      <div class="card reveal" style="animation-delay: ${i * 100}ms">
+        <div class="p-6 border-l-4 border-yellow-500">
+          <span class="inline-block text-xs uppercase tracking-wider text-yellow-400 bg-yellow-500/10 px-3 py-1 rounded-full mb-3">${e.type}</span>
+          <h3 class="font-serif text-2xl font-bold text-white mb-2">${e.title}</h3>
+          <div class="flex items-center gap-2 text-gray-400 text-sm mb-2">
+            <span>📅</span> ${e.date}
+          </div>
+          <div class="flex items-center gap-2 text-gray-400 text-sm">
+            <span>📍</span> ${e.location}
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    // Render testimonios
+    const testimonialsGrid = document.getElementById('testimonials-grid');
+    testimonialsGrid.innerHTML = LUMIERE_DATA.testimonials.slice(0, 6).map((t, i) => `
+      <div class="testimonial-card reveal" style="animation-delay: ${i * 80}ms">
+        <div class="flex items-center gap-4 mb-4">
+          <img src="${t.avatar}" alt="${t.name}" class="avatar">
+          <div>
+            <h4 class="font-semibold text-white">${t.name}</h4>
+            <p class="text-xs text-gray-500">${t.event}</p>
+            <div class="text-yellow-400 text-sm mt-1">${'★'.repeat(t.rating)}</div>
+          </div>
+        </div>
+        <p class="text-gray-300 leading-relaxed italic">"${t.text}"</p>
+      </div>
+    `).join('');
+
+    // Re-init reveal
+    initScrollReveal();
+  </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros | Eventos Lumière</title>
+  <meta name="description" content="Conoce la historia, el equipo y los valores de Eventos Lumière, productora de eventos premium en Chile.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            gold: { DEFAULT: '#d4af37', light: '#e8c962', dark: '#a8861e' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <section class="relative pt-32 pb-20 px-6 bg-[#141414] overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?w=1920&q=80'); background-size: cover; background-position: center;"></div>
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <p class="text-yellow-400 uppercase tracking-[0.3em] text-sm mb-4 animate-fade-in-up">Sobre nosotros</p>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up delay-100">
+        Más de una década <span class="text-gradient-gold">creando magia</span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up delay-200">
+        Desde 2013, hemos transformado los sueños de nuestros clientes en experiencias inolvidables. Somos un equipo apaixonado por la excelencia, la creatividad y los detalles.
+      </p>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal-left">
+          <p class="text-yellow-400 uppercase tracking-widest text-sm mb-3">Nuestra historia</p>
+          <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 section-title left">Pasión por los eventos</h2>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Lumière nació en 2013 del sueño de dos socias: crear una productora de eventos que fusionara la elegancia clásica con la innovación más vanguardista. Lo que empezó como un pequeño estudio en Santiago se ha convertido en una referencia en Chile y Latinoamérica.
+          </p>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Hoy, con más de 850 eventos producidos, seguimos manteniendo la misma pasión del primer día. Cada proyecto es único, cada cliente es familia, y cada evento es una oportunidad para crear algo extraordinario.
+          </p>
+          <p class="text-gray-300 leading-relaxed">
+            Hemos tenido el honor de trabajar con las marcas más exigentes, celebrities internacionales y familias que nos confían el día más importante de sus vidas. Esa confianza es nuestro mayor logro.
+          </p>
+        </div>
+        <div class="reveal-right">
+          <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80" 
+               alt="Equipo Lumière trabajando" 
+               class="rounded-2xl shadow-2xl w-full">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISIÓN VISIÓN VALORES -->
+  <section class="py-24 px-6 bg-[#141414]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="text-yellow-400 uppercase tracking-widest text-sm mb-3">Nuestro ADN</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold section-title">Misión, Visión y Valores</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card p-8 reveal">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-500/20 to-yellow-500/5 flex items-center justify-center text-3xl mb-6">🎯</div>
+          <h3 class="font-serif text-2xl font-bold mb-4 text-yellow-400">Misión</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Transformar ideas en experiencias memorables, superando las expectativas de nuestros clientes con creatividad, profesionalismo y atención al detalle.
+          </p>
+        </div>
+
+        <div class="card p-8 reveal" style="animation-delay: 100ms">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-500/20 to-yellow-500/5 flex items-center justify-center text-3xl mb-6">✨</div>
+          <h3 class="font-serif text-2xl font-bold mb-4 text-yellow-400">Visión</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Ser la productora de eventos referente en Europa, reconocida por nuestra innovación, calidad humana y capacidad de crear momentos que trascienden.
+          </p>
+        </div>
+
+        <div class="card p-8 reveal" style="animation-delay: 200ms">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-500/20 to-yellow-500/5 flex items-center justify-center text-3xl mb-6">💎</div>
+          <h3 class="font-serif text-2xl font-bold mb-4 text-yellow-400">Valores</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Excelencia, creatividad, compromiso, transparencia y paixão. Cinco pilares que guían cada decisión y cada proyecto que emprendemos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="text-yellow-400 uppercase tracking-widest text-sm mb-3">El equipo</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 section-title">Las personas detrás</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-6">Un equipo multidisciplinar de profesionales apaixonados por crear experiencias únicas.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="team-grid">
+        <!-- Inyectado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="py-24 px-6 bg-[#141414]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="text-yellow-400 uppercase tracking-widest text-sm mb-3">Trayectoria</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 section-title">Nuestra evolución</h2>
+      </div>
+
+      <div class="timeline" id="timeline">
+        <!-- Inyectado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center reveal">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">¿Te gustaría trabajar con nosotros?</h2>
+      <p class="text-xl text-gray-300 mb-10">Estaremos encantados de escuchar tu proyecto y ayudarte a hacerlo realidad.</p>
+      <a href="contacto.html" class="btn-primary">Contactar</a>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    injectComponents('sobre-nosotros.html');
+
+    // Render team
+    const teamGrid = document.getElementById('team-grid');
+    teamGrid.innerHTML = LUMIERE_DATA.team.map((m, i) => `
+      <div class="card reveal" style="animation-delay: ${i * 100}ms">
+        <div class="aspect-square overflow-hidden">
+          <img src="${m.photo}" alt="${m.name}" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="p-5 text-center">
+          <h3 class="font-serif text-xl font-bold text-white mb-1">${m.name}</h3>
+          <p class="text-yellow-400 text-sm uppercase tracking-wider mb-3">${m.role}</p>
+          <p class="text-gray-400 text-sm leading-relaxed">${m.bio}</p>
+        </div>
+      </div>
+    `).join('');
+
+    // Render timeline
+    const timeline = document.getElementById('timeline');
+    timeline.innerHTML = LUMIERE_DATA.timeline.map((t, i) => `
+      <div class="timeline-item reveal" style="animation-delay: ${i * 100}ms">
+        <div class="timeline-content">
+          <div class="card p-6 inline-block">
+            <span class="text-yellow-400 font-serif text-3xl font-bold">${t.year}</span>
+            <h3 class="font-serif text-xl font-bold text-white mt-2 mb-2">${t.title}</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">${t.desc}</p>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    initScrollReveal();
+  </script>
+</body>
+</html>

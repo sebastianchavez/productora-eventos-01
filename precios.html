@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios | Eventos Lumière</title>
+  <meta name="description" content="Planes y precios de nuestros servicios de producción de eventos. Esencial, Premium y VIP.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
+          colors: { gold: { DEFAULT: '#d4af37', light: '#e8c962', dark: '#a8861e' } }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-16 px-6 bg-[#141414] text-center">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-yellow-400 uppercase tracking-[0.3em] text-sm mb-4 animate-fade-in-up">Planes y precios</p>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up delay-100">
+        Inversión a tu <span class="text-gradient-gold">medida</span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up delay-200">
+        Tres planes base diseñados para cubrir las necesidades más comunes. Siempre personalizables.
+      </p>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-3 gap-8 items-stretch" id="pricing-grid">
+        <!-- Inyectado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS ADICIONALES -->
+  <section class="py-24 px-6 bg-[#141414]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <p class="text-yellow-400 uppercase tracking-widest text-sm mb-3">Extras</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold section-title">Servicios adicionales</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-6">Complementa tu evento con servicios extra para una experiencia aún más completa.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" id="extras-grid">
+        <!-- Inyectado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARATIVA -->
+  <section class="py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <p class="text-yellow-400 uppercase tracking-widest text-sm mb-3">Comparativa</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold section-title">¿Cuál es tu plan ideal?</h2>
+      </div>
+
+      <div class="card overflow-x-auto reveal">
+        <table class="w-full text-left">
+          <thead class="bg-[#1f1f1f]">
+            <tr>
+              <th class="p-4 font-serif text-yellow-400">Característica</th>
+              <th class="p-4 text-center font-serif">Esencial</th>
+              <th class="p-4 text-center font-serif text-yellow-400">Premium</th>
+              <th class="p-4 text-center font-serif">VIP</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-300 text-sm">
+            <tr class="border-t border-[#2a2a2a]"><td class="p-4">Invitados</td><td class="p-4 text-center">Hasta 50</td><td class="p-4 text-center">Hasta 150</td><td class="p-4 text-center">Ilimitados</td></tr>
+            <tr class="border-t border-[#2a2a2a]"><td class="p-4">Coordinación</td><td class="p-4 text-center">✓</td><td class="p-4 text-center">✓</td><td class="p-4 text-center">✓ Dedicado</td></tr>
+            <tr class="border-t border-[#2a2a2a]"><td class="p-4">Decoración</td><td class="p-4 text-center">Estándar</td><td class="p-4 text-center">Personalizada</td><td class="p-4 text-center">Diseño exclusivo</td></tr>
+            <tr class="border-t border-[#2a2a2a]"><td class="p-4">Catering</td><td class="p-4 text-center">—</td><td class="p-4 text-center">Gourmet</td><td class="p-4 text-center">De autor</td></tr>
+            <tr class="border-t border-[#2a2a2a]"><td class="p-4">Fotografía y vídeo</td><td class="p-4 text-center">—</td><td class="p-4 text-center">✓</td><td class="p-4 text-center">✓ Producción</td></tr>
+            <tr class="border-t border-[#2a2a2a]"><td class="p-4">Música</td><td class="p-4 text-center">Ambiental</td><td class="p-4 text-center">DJ</td><td class="p-4 text-center">DJ + Show</td></tr>
+            <tr class="border-t border-[#2a2a2a]"><td class="p-4">Transporte</td><td class="p-4 text-center">—</td><td class="p-4 text-center">—</td><td class="p-4 text-center">Privado</td></tr>
+            <tr class="border-t border-[#2a2a2a]"><td class="p-4">Servicio (horas)</td><td class="p-4 text-center">4</td><td class="p-4 text-center">8</td><td class="p-4 text-center">Ilimitado</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-24 px-6 bg-[#141414]">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <p class="text-yellow-400 uppercase tracking-widest text-sm mb-3">FAQ</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold section-title">Preguntas frecuentes</h2>
+      </div>
+
+      <div id="faq-list" class="reveal">
+        <!-- Inyectado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center reveal">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">¿Listo para empezar?</h2>
+      <p class="text-xl text-gray-300 mb-10">Solicita un presupuesto personalizado y sin compromiso.</p>
+      <a href="contacto.html" class="btn-primary">Solicitar Presupuesto</a>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    injectComponents('precios.html');
+
+    // Pricing
+    const pricingGrid = document.getElementById('pricing-grid');
+    pricingGrid.innerHTML = LUMIERE_DATA.pricing.map((p, i) => `
+      <div class="pricing-card reveal ${p.highlighted ? 'featured' : ''}" style="animation-delay: ${i * 100}ms">
+        ${p.highlighted ? '<span class="pricing-badge">Más popular</span>' : ''}
+        <h3 class="font-serif text-2xl font-bold text-white mb-2">${p.name}</h3>
+        <p class="text-gray-400 text-sm mb-6 min-h-[3rem]">${p.description}</p>
+        <div class="mb-2">
+          <span class="text-gray-400 text-sm">${p.period}</span>
+        </div>
+        <div class="mb-1 flex items-baseline gap-1">
+          <span class="text-2xl text-yellow-400">$</span>
+          <span class="pricing-price">${p.price}</span>
+        </div>
+        <p class="text-gray-500 text-xs mb-8 uppercase tracking-wider">IVA no incluido · CLP</p>
+        <ul class="space-y-1 mb-8">
+          ${p.features.map(f => `
+            <li class="pricing-feature">
+              <span class="pricing-feature-icon">✓</span>
+              <span>${f}</span>
+            </li>
+          `).join('')}
+          ${p.notIncluded.map(f => `
+            <li class="pricing-feature disabled">
+              <span class="pricing-feature-icon">×</span>
+              <span>${f}</span>
+            </li>
+          `).join('')}
+        </ul>
+        <a href="contacto.html" class="${p.highlighted ? 'btn-primary' : 'btn-outline'} w-full">Solicitar</a>
+      </div>
+    `).join('');
+
+    // Extras
+    const extrasGrid = document.getElementById('extras-grid');
+    extrasGrid.innerHTML = LUMIERE_DATA.extras.map((e, i) => `
+      <div class="card p-5 reveal" style="animation-delay: ${i * 50}ms">
+        <div class="flex justify-between items-start gap-2">
+          <h4 class="font-semibold text-white text-sm leading-tight">${e.name}</h4>
+          <span class="text-yellow-400 font-serif font-bold text-lg whitespace-nowrap">${e.price}</span>
+        </div>
+      </div>
+    `).join('');
+
+    // FAQ
+    const faqList = document.getElementById('faq-list');
+    faqList.innerHTML = LUMIERE_DATA.faq.map(f => `
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>${f.question}</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">${f.answer}</div>
+      </div>
+    `).join('');
+
+    initFAQ();
+    initScrollReveal();
+  </script>
+</body>
+</html>
